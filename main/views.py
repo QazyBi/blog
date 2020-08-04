@@ -12,8 +12,6 @@ MAX_ARTICLE_NUM = 10
 
 def homepage(request):
     articles = Blog.objects.order_by('-publication_date')
-    print(articles)
-    print(Blog.objects.all())
     article_num = len(articles)
     if article_num == 0:
         context = {}
@@ -58,5 +56,4 @@ def ith_article(request, article_id):
     context = {
         "article": article,
     }
-    print(article)
     return render(request, "main/view_article.html", context)
