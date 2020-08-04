@@ -3,6 +3,7 @@
 
 ## Description
 *This is the implementation of test task for a job vacancy.*\
+\
 Website allows to write articles using feature-rich text editor.
 
 There are three pages:
@@ -10,12 +11,16 @@ There are three pages:
   2. Write Article page. Page to write article title, text and attach image and post it.
   3. Read Article page. Page to view selected article.
 
+One page for an admin:
+  1. Admin page. CRUD articles, manage users.
+\
+\
 Used Stack:
 - [x] Python3
 - [x] Django
 - [x] Postgresql
 - [x] Materialize
-- [x] Git(Obviously)\  
+- [x] Git(Obviously)
 
 - [x] TinyMCE(text-editor)
 
