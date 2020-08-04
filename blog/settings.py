@@ -25,7 +25,7 @@ SECRET_KEY = '5myn^z#b7d4866ah3%y+9y^7y8spkd+fbb+h_h-y@!s-q+w!u('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://qb-blog.herokuapp.com/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['qb-blog.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
