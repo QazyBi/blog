@@ -25,30 +25,56 @@
                 <textarea id="basic-example" name="article_text"></textarea>
             </div>
 
-            <div class="col s3 image-upload">
+            <div id='div-upload-image' class="col s3 image-upload">
                <h6 class="upload_img-text">Загрузить изображение</h6>
                <input type="file" name="image" onchange="upload_img(this);" id="selected_file" style="display: none;" />
                 
                 <input type="button" value="Файл" id="upload_file_btn" onclick="document.getElementById('selected_file').click();" />
+                <input type="button" value="X" id="remove_file_btn" style="display: none;" onclick="remove_img(this);" />
                 <img id="img_id" src="#" alt="" />
             </div>
         </div>
     </form>
 
     <script type="text/javascript">
+        function remove_img(input) {
+            // Remove Previous Image
+            document.getElementById('img_id').src = '';
+
+            // Hide X(cross) Button
+            input.style.display = 'none';
+
+            // Resize div
+            upload_file_div = document.getElementById("div-upload-image");
+            upload_file_div.style.height = '100px';
+            
+            // Display Upload Button
+            upload_file_button = document.getElementById("upload_file_btn");
+            upload_file_button.style.display = 'block';
+        }
+
         function upload_img(input) {
             if (input.files && input.files[0]) {
+
+                // Hide add button
                 upload_file_button = document.getElementById("upload_file_btn");
                 upload_file_button.style.display = 'none';
-                var reader = new FileReader();
 
+                // Display X(cross) button
+                remove_file_button = document.getElementById("remove_file_btn");
+                remove_file_button.style.display = 'block';
+                
+                // Resize div
+                upload_file_div = document.getElementById("div-upload-image");
+                upload_file_div.style.height = 'auto';
+
+                // Update Image
+                var reader = new FileReader();
                 reader.onload = function (e) {
-                    document.getElementById('img_id').src = e.target.result;
+                    document.getElementById("img_id").src = e.target.result;
                 }
 
                 reader.readAsDataURL(input.files[0]);
-
-
             }
         }
     </script>

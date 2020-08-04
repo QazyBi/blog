@@ -40,6 +40,10 @@
     font-weight: 700;
 }
 /* Input */
+.article-title-input:focus {
+    color: #3B70F2;
+    font-family: "Houschka Rounded Alt Bold";
+}
 .article-title-input, input[type=text]:focus {
     box-shadow: none!important;
     border-style: solid !important;
