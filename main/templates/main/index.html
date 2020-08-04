@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="section row">
+    <div class="col s8">
+        <h6 class="new-header-text">NEW</h6>
+        <h3 class="header-article-title">{{ newest_article.title}}</h3>
+        <div class="article-summary-p">
+          {{ newest_article | safe }}
+        </div>
+        <br>
+        <a href="{% url 'main:ith_article' newest_article.id %}" class="waves-effect waves-light btn-large read-btn">Читать</a>
+    </div>
+    <div class="col s4">
+        <img class="header-article-img" src="{{ newest_article.image.url }}">
+    </div>
+  </div>
+    <div class="divider"></div>
+    <div class="row">
+      <h5 class="other-articles-text">Другие cтатьи</h5>
+      {% for article in articles %}
+          <div class="col s4 bg-light">
+            <div class="card z-depth-0">
+              <a href="{% url 'main:ith_article' article.id %}" class="nav-link"></a>
+              <div class="card-image">
+                <div class="article-date">{{ article.publication_date | date:"d M Y H:i" }}</div>
+                <img class="card-img" alt="Здесь должна быть картинка" src="{{ article.image.url }}">
+              </div>
+              
+              <div class="card-content">
+                <p class="article-title-p">{{ article.title }}</p>
+              </div>                  
+            </div>
+          </div>
+      {% endfor %}
+    </div>
+    <script>
+    </script>
+{% endblock %}

@@ -1,0 +1,55 @@
+ /*Structure */
+.nav-wrapper{ 
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+/* Text Styling */
+@import url(//db.onlinewebfonts.com/c/c45b220729bbd31286f113128fc30c86?family=Kamerik205W00-Bold);
+@import url(//db.onlinewebfonts.com/c/2b55cbab146ff1622cb53ff2bfcffc4a?family=Houschka+Rounded+Alt+Bold);
+
+@font-face {
+    font-family: "Kamerik205W00-Bold"; src: 
+    url("//db.onlinewebfonts.com/t/c45b220729bbd31286f113128fc30c86.eot"); src: 
+    url("//db.onlinewebfonts.com/t/c45b220729bbd31286f113128fc30c86.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/c45b220729bbd31286f113128fc30c86.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/c45b220729bbd31286f113128fc30c86.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/c45b220729bbd31286f113128fc30c86.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/c45b220729bbd31286f113128fc30c86.svg#Kamerik205W00-Bold") format("svg");
+}
+
+@font-face {
+    font-family: "Houschka Rounded Alt Bold"; src:
+    url("//db.onlinewebfonts.com/t/2b55cbab146ff1622cb53ff2bfcffc4a.eot"); src:
+    url("//db.onlinewebfonts.com/t/2b55cbab146ff1622cb53ff2bfcffc4a.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/2b55cbab146ff1622cb53ff2bfcffc4a.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/2b55cbab146ff1622cb53ff2bfcffc4a.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/2b55cbab146ff1622cb53ff2bfcffc4a.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/2b55cbab146ff1622cb53ff2bfcffc4a.svg#Houschka Rounded Alt Bold") format("svg"); }
+
+.logo {
+    font-weight: 900;
+    font-family: "Kamerik205W00-Bold";
+    font-size: 24px;
+}
+
+.navbar-text {
+    font-family: "Houschka Rounded Alt Bold";
+    font-size: 22px;
+    padding-bottom: 10%;
+}
+
+.logo{
+    color: #3B70F2;
+}
+
+.add-article-btn {
+    background-color: #3B70F2;
+    font-family: "Houschka Rounded Alt Bold";
+    border-radius: 5px !important;
+}
+
+.add-article-btn:hover {
+    background-color: #6483F5;
+}

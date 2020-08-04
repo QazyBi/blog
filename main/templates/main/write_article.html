@@ -1,0 +1,56 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/article_write.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="section row">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <h4 class="add-article-header">Добавить статью</h4>
+        <div class="input-row1">
+            <div class="col s8">
+                <input type="text" name="title" class="article-title-input" placeholder="Ведите название статьи">
+            </div>
+            <div class="col s1">
+                <input type="submit" class="waves-light pink lighten-2 white-text z-depth-0 publish-btn btn-small"  value="Опубликовать">
+            </div>
+        </div>
+
+        <div class="input-row2">
+            <div class="col s8">
+                <textarea id="basic-example" name="article_text"></textarea>
+            </div>
+
+            <div class="col s3 image-upload">
+               <h6 class="upload_img-text">Загрузить изображение</h6>
+               <input type="file" name="image" onchange="upload_img(this);" id="selected_file" style="display: none;" />
+                
+                <input type="button" value="Файл" id="upload_file_btn" onclick="document.getElementById('selected_file').click();" />
+                <img id="img_id" src="#" alt="" />
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        function upload_img(input) {
+            if (input.files && input.files[0]) {
+                upload_file_button = document.getElementById("upload_file_btn");
+                upload_file_button.style.display = 'none';
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    document.getElementById('img_id').src = e.target.result;
+                }
+
+                reader.readAsDataURL(input.files[0]);
+
+
+            }
+        }
+    </script>
+</div>
+{% endblock %}

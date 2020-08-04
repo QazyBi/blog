@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/article_view.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="article-view">
+    <h4 class="article-title">{{ article.title }}</h4>
+    <div class="col s4">
+        <img class="article-img" src="{{ article.image.url }}">
+    </div>
+    <div>{{ article.text | safe }}</div>
+</div>
+{% endblock %}

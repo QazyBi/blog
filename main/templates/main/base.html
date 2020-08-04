@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Kodland</title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Navigation Bar Style -->
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+        {% block css %}
+        {% endblock %}
+        
+        <!-- Fonts -->
+        <link href="//db.onlinewebfonts.com/c/c45b220729bbd31286f113128fc30c86?family=Kamerik205W00-Bold" rel="stylesheet" type="text/css"/>
+        <link href="//db.onlinewebfonts.com/c/2b55cbab146ff1622cb53ff2bfcffc4a?family=Houschka+Rounded+Alt+Bold" rel="stylesheet" type="text/css"/>
+        
+        <!-- Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>  
+      <nav>
+        <div class="nav-wrapper white">
+          <ul class="left hide-on-med-and-down">
+            <li><a class="logo" href="{% url 'main:homepage' %}">kodland</a></li>  <!-- class="brand-logo" -->
+            <li><a class="waves-effect waves-light black-text navbar-text">Блог</a></li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="{% url 'main:add_article' %}" class="waves-effect waves-light btn-small z-depth-0 add-article-btn"><i class="material-icons left">add</i>Добавить cтатью</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      {% block content %}
+      {% endblock %}
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+      <script type="text/javascript" src="{% static 'js/tinymce/editor.js' %}" ></script>
+
+    </body>
+</html>

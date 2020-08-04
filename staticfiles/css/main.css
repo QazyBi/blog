@@ -1,0 +1,99 @@
+ /*Structure */
+.section, .row { 
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.section {
+    padding-top: 3%;
+}
+
+.other-articles-text {
+    padding-left: 1%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+
+.header-article-img {
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 20%;
+}
+
+.card-image {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.card-img{
+    height: 140px;
+}
+
+.article-summary-p {
+    padding-right: 35%;
+}
+
+
+/* Text Styling */
+.article-date {
+    color: #979797;
+    text-align: top;
+    z-index: 1;
+}
+.header-article-title {
+    font-weight: 900;
+    color: #3B70F2;
+}
+
+.new-header-text {
+    color: #EB5F9C;
+    font-family: "Houschka Rounded Alt Bold";
+}
+
+.read-btn {
+    background-color: #3B70F2;
+    font-family: "Houschka Rounded Alt Bold";
+    border-radius: 5px;
+}
+
+.article-summary-p {
+    font-weight: 500;
+    font-family: Circe Rounded;
+}
+.article-title-p {
+    font-weight: 500;
+    font-family: "Houschka Rounded Alt Bold";
+    color: #3B70F2;
+    font-size: 18px;
+    text-align: center;
+}
+.other-articles-text {
+    font-family: "Houschka Rounded Alt Bold";
+    color: #3B70F2;
+    /*font-weight: 900;*/
+}
+.read-btn {
+    font-size: 20px;
+}
+
+.read-btn:hover {
+    background-color: #6483F5;
+}
+/* Border */
+.card {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #979797;
+    border-radius: 3px;
+    width: 20rem;
+    height: 20rem;
+}
+
+/* Card Link */
+.nav-link {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    z-index: 1;
+}
