@@ -2,7 +2,6 @@
 - **Website:** https://qb-blog.herokuapp.com/
 
 ## Description
-*This is the implementation of test task for a job vacancy.*\
 \
 Website allows to write articles using feature-rich text editor.
 
